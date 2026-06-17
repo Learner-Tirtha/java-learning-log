@@ -57,6 +57,8 @@ public class NestedClass {
         };
         P1.processPayment(124);
 
+        
+
     }
 
     public void Greeting ()
@@ -248,36 +250,9 @@ class Computer
     
 }
 
-//class Account
-// {
-//     public static final int SAVING=1;
-//     public static final int CURRENT=2;
-//     public static final int FD=3;
-// }
-/*
-    Type  safety        means it anywhere when i put int a1=Account.SAVGING , it can be change to 100 also
-    poor readablity     it is refere to  if it  3 --> FD if 2-->CURRENT And all ..
-    Grouping problem    if same 3 number also refer to use in role class it being logical corect and not give error there 
-    String comparing    if it used we have to first convert all letter in the same format and then compare andcomparing is slow                operation and still it has type safety problem
-    Duplicate value     Allow in same class 
-
-*/
-//  enum is class introduce in java 1.5  enum-->enumeration
-// enum is still being class
-// class AccountType extends Enum<AccountType>{
-//      public static final AccountType SAVING =new AccountType();
-//      public static final AccountType CURRENT =new AccountType();
-//      public static final AccountType FIXED_DEPOSIT =new AccountType();
-//      private AccountType(){}   //no one outside the class can create object of the class Type Saftey 
-//    when we do AccountType acc=AccountType.SAVING;  --> it means acc is reference of Accountype refere to same memory refer    by AccounuType.SAVING  it is another type of marker class because as class it doesnot have any state or behaviour
-//   it also have Type safety because we cannot create object as we disscussed and second thing we can not give any integer or string value in AccountType reference 
-
-//      AccountTpye acc=100;  NOT ALLOWED
-//      AccountType acc='SAVING'; NOT ALLOWED only allowed AccountType.SAVING,AccountType.CURRENT,AccountType.FIXED_DEPOSIT
-// 
-// }
-enum AccountType{
-    SAVING,CURRENT,FIXED_DEPOSIT;
+enum AccountType 
+{
+    SAVING,CURRENT;
 }
 
 class BankAccount
