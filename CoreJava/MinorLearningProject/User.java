@@ -1,0 +1,17 @@
+package CoreJava.MinorLearningProject;
+
+public abstract class User {
+    protected String username;
+    protected String password;
+    protected String name;
+
+    public User(String username, String password, String name) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+    }
+
+    public String getUsername() { return username; }
+    public boolean checkPassword(String password) { return this.password.equals(password); }
+    public String getName() { return name; }
+}
