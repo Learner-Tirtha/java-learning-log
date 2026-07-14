@@ -1,6 +1,6 @@
 package CoreJava.Multithreading.ProducerConsumerProblem;
 
-public class Consumer implements Runnable {
+class Consumer implements Runnable {
     SharedBuffer buffer;
      public Consumer(SharedBuffer buffer) {
         this.buffer = buffer;

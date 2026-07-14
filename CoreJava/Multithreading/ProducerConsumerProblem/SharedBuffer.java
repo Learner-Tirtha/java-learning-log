@@ -1,6 +1,6 @@
 package CoreJava.Multithreading.ProducerConsumerProblem;
 
-import java.util.List;
+
 import java.util.Queue;
 
 class SharedBuffer
@@ -16,7 +16,7 @@ class SharedBuffer
     public synchronized void produceItem(Integer item) throws InterruptedException
     {
         while(buffer.size()==bufferSize)
-            wait();
+          { System.out.println("Buffer is full..."); wait(); }
     
         buffer.offer(item);
         if(buffer.size()==1)
@@ -28,7 +28,7 @@ class SharedBuffer
     {
         Integer item = null;
         while(buffer.isEmpty())
-            wait();
+        {  System.out.println("Buffer is Empty...");  wait();}
         
         item= buffer.poll();
         if(buffer.size()==(bufferSize-1))

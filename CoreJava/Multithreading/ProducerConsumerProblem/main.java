@@ -3,11 +3,11 @@ package CoreJava.Multithreading.ProducerConsumerProblem;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class main {
+class Main {
     public static void main(String[] args) {
          Queue<Integer> queue = new LinkedList<>();
 
-        SharedBuffer buffer = new SharedBuffer(queue, 5);
+        SharedBuffer buffer = new SharedBuffer(queue, 2);
 
         Thread producerThread = new Thread(new Producer(buffer), "Producer");
 

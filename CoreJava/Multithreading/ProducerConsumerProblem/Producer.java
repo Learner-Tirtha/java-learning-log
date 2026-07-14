@@ -1,8 +1,8 @@
 package CoreJava.Multithreading.ProducerConsumerProblem;
 
-import java.util.Scanner;
 
-public class Producer implements Runnable {
+
+class Producer implements Runnable {
     SharedBuffer buffer;
     public Producer(SharedBuffer buffer) {
         this.buffer = buffer;
